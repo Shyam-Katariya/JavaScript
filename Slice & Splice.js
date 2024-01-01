@@ -10,6 +10,3 @@ const arr1 = myarr.slice(1,3);
 const arr2 = myarr.splice(1,3);
     console.log("Splice array -> ",arr2);
     console.log(myarr);
-
-// All Methods
-
