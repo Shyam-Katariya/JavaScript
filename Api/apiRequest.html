@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(16, 58, 65);
+            color: aliceblue;
+            letter-spacing: 1.5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <form>
+            <button id="submit"> CLICK TO SHOW DATA </button>
+        </form>
+    </div>
+</body>
+<script>
+
+    const submit = document.getElementById('submit').onclick = function(){
+
+        const requestURL = 'https://api.github.com/users/Shyam-Katariya'
+        const xhr =  new XMLHttpRequest();
+        xhr.open('GET', requestURL )  
+        xhr.onreadystatechange = function () {
+            console.log(xhr.readyState); 
+            if(xhr.readyState == 4){
+                const data = JSON.parse(this.responseText);
+                console.log(typeof data);
+                const followrs = data.following;
+                return followrs
+                data.innerHTML = `<h2>${followrs}</h2>`;
+            }
+        }
+        xhr.send();
+        
+    }
+    
+    
+</script> 
+</html>

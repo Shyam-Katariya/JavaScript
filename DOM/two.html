@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color:rgb(16, 58, 65);
+            color: aliceblue;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1> Hello Billiounar </h1>
+    <button id="stop"> STOP </button>
+</body>
+<script>    
+    const Name = () => {
+        console.log("Shyam");
+    }
+    const changeName = () => {
+        document.querySelector('h1').innerHTML = 'Hello, Shyam'
+    }
+    setTimeout(changeName, 5000) // run only one time
+</script>
+</html>
